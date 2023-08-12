@@ -11,7 +11,7 @@ const NavBar = () => {
         <div className="w-[585px] left-0 top-[-2px] absolute justify-center items-center gap-[43px] inline-flex">
           <img
             className="w-[150px] h-[45px]"
-            src="https://via.placeholder.com/150x45"
+            src="logo.jpg"
           />
           <div className="w-[392px] h-8 relative flex-col justify-start items-start flex">
             <div className="absolute pointer-events-auto ...">
