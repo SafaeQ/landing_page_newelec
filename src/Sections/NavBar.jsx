@@ -1,12 +1,18 @@
 import React, { useState } from "react";
 import { FiBell } from "react-icons/fi";
-import DropDown from "./DropDown";
+import DropDown from "../Components/DropDown";
+import DropDownSec from "../Components/DropDownSec";
 
 const NavBar = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [isOpened, setIsOpened] = useState(false);
 
   const toggleDropdown = () => {
     setIsOpen(!isOpen);
+  };
+
+  const toggleDropdownSecond = () => {
+    setIsOpened(!isOpened);
   };
 
   const dropdownOptions = [
@@ -72,10 +78,13 @@ const NavBar = () => {
             </div>
           </div>
           <div className="w-[120px] h-8 relative flex-row justify-between items-start flex">
-            <img
-              className="w-8 h-8 rounded-full"
-              src="https://via.placeholder.com/32x32"
-            />
+            <button type="button" onClick={toggleDropdownSecond}>
+              <img
+                className="w-8 h-8 rounded-full"
+                src="https://via.placeholder.com/32x32"
+              />
+            </button>
+            {isOpened && <DropDownSec />}
             <div>
               <div className="text-neutral-500 text-[13px] font-semibold">
                 Blaise Defloo
