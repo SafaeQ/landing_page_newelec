@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { FiBell } from "react-icons/fi";
+import DropDown from "./DropDown";
 
 const NavBar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -7,6 +8,14 @@ const NavBar = () => {
   const toggleDropdown = () => {
     setIsOpen(!isOpen);
   };
+
+  const dropdownOptions = [
+    { label: "English (EN)", img: "uk.png" },
+    { label: "Frençais (FR)", img: "fr.png" },
+    { label: "Nederlands (NL)", img: "nl.png" },
+    { label: "Español (ES)", img: "sp.png" },
+    { label: "Deutsch (DE) ", img: "dt.png" },
+  ];
 
   return (
     <div
@@ -59,36 +68,7 @@ const NavBar = () => {
               <button type="button" id="menu-button" onClick={toggleDropdown}>
                 <img className="w-8 h-4 rounded-full " src="uk.png" />
               </button>
-              {isOpen && (
-                <div
-                  class="absolute right-0 z-10 mt-2 w-56 origin-top-right divide-y divide-gray-100 rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none"
-                  role="menu"
-                  aria-orientation="vertical"
-                  aria-labelledby="menu-button"
-                  tabindex="-1"
-                >
-                  <div class="py-1" role="none">
-                    <a
-                      href="#"
-                      class="text-gray-700 block px-4 py-2 text-sm"
-                      role="menuitem"
-                      tabindex="-1"
-                      id="menu-item-0"
-                    >
-                      Edit
-                    </a>
-                    <a
-                      href="#"
-                      class="text-gray-700 block px-4 py-2 text-sm"
-                      role="menuitem"
-                      tabindex="-1"
-                      id="menu-item-1"
-                    >
-                      Duplicate
-                    </a>
-                  </div>
-                </div>
-              )}
+              {isOpen && <DropDown options={dropdownOptions} />}
             </div>
           </div>
           <div className="w-[120px] h-8 relative flex-row justify-between items-start flex">
