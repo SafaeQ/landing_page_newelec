@@ -1,4 +1,5 @@
 import React from "react";
+import { FiBell } from "react-icons/fi";
 
 const NavBar = () => {
   return (
@@ -45,11 +46,18 @@ const NavBar = () => {
           </div>
         </div>
         <div className="w-52 left-[1106px] top-[5px] absolute justify-end items-center gap-[27px] inline-flex">
-          <div className="w-[19px] h-[19px] relative flex-row justify-between items-start flex">
-            <div className="w-[17.81px] h-[17.81px] relative">Z</div>
+          <div className="w-[19px] h-[19px] relative flex-row justify-between items-center flex">
+            <div className="w-[17.81px] h-[17.81px] relative">
+              <FiBell className="w-4 h-6 rounded-full" color="gray" />
+            </div>
           </div>
-          <div className="w-[19px] h-[19px] relative flex-row justify-between items-start flex">
-            <div className="w-[17.43px] h-[6.95px] relative">A</div>
+          <div className="w-[19px] h-[19px] relative flex-row justify-between items-center flex">
+            <div className="w-[17.43px] h-[6.95px] relative">
+              <img
+                className="w-8 h-4 rounded-full "
+                src="uk.png"
+              />
+            </div>
           </div>
           <div className="w-[120px] h-8 relative flex-row justify-between items-start flex">
             <img
