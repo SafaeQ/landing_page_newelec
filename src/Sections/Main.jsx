@@ -10,7 +10,9 @@ const Main = () => {
               Edit Training “Working At Height”
             </div>
             <div className="w-[20%] flex-row gap-[25px] items-start flex">
-              <div className="text-zinc-400 text-[13px] font-bold pt-2">Cancel</div>
+              <div className="text-zinc-400 text-[13px] font-bold pt-2">
+                Cancel
+              </div>
               <div className="w-[147px] h-[35px] relative">
                 <div className="w-[147px] h-[35px] left-0 top-0 absolute bg-orange-500 rounded-[5px]" />
                 <div className="left-[28px] top-[8px] absolute text-white text-sm font-bold">
@@ -21,7 +23,11 @@ const Main = () => {
           </div>
         </div>
 
-        <div>09</div>
+        <div className="grid grid-cols-12 grid-rows-4 gap-4 ">
+          <div className="col-span-11 row-span-4 col-start-2 row-start-1 bg-white shadow-sm w-[80%] ml-[57px] ">
+            1
+          </div>
+        </div>
         <div>09</div>
       </div>
     </>
