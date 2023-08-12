@@ -2,65 +2,70 @@ import React from "react";
 
 const NavBar = () => {
   return (
-    <nav className="bg-white-800 p-4">
-      <div className="container mx-auto flex justify-between items-center">
-        <div className="text-gray-400 text-xl font-semibold">Logo</div>
-        <label
-          for="default-search"
-          class="mb-2 text-sm font-medium text-gray-900 sr-only dark:text-white"
-        >
-          Search
-        </label>
-        <div class="relative">
-          <div class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
-            <svg
-              class="w-4 h-4 text-gray-500 dark:text-gray-400"
-              aria-hidden="true"
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 20 20"
-            >
-              <path
-                stroke="currentColor"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z"
-              />
-            </svg>
-          </div>
-          <input
-            type="search"
-            id="default-search"
-            class="block w-full p-4 pl-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-            placeholder="Quick search ..."
-            required
+    <div
+      className="h-[70px] bg-white shadow flex items-center justify-center "
+      style={{ width: "100%" }}
+    >
+      <div className="w-[1215px] h-[42px] relative">
+        <div className="w-[585px] left-0 top-[-2px] absolute justify-center items-center gap-[43px] inline-flex">
+          <img
+            className="w-[150px] h-[45px]"
+            src="https://via.placeholder.com/150x45"
           />
+          <div className="w-[392px] h-8 relative flex-col justify-start items-start flex">
+            <div className="absolute pointer-events-auto ..."></div>
+            <input
+              placeholder="Quick search ..."
+              style={{
+                width: 392,
+                height: 32,
+                background: "#F6F6F6",
+                borderRadius: 5,
+              }}
+            />
+          </div>
         </div>
-        <ul className="flex space-x-4">
-          <li>
-            <a href="#" className="text-gray-400">
-              Dashboard
-            </a>
-          </li>
-          <li>
-            <a href="#" className="text-gray-400">
-              Trainings
-            </a>
-          </li>
-          <li>
-            <a href="#" className="text-gray-400">
-              Users
-            </a>
-          </li>
-          <li>
-            <a href="#" className="text-gray-400">
+        <div className="w-52 left-[1106px] top-[5px] absolute justify-end items-center gap-[27px] inline-flex">
+          <div className="w-[19px] h-[19px] relative flex-row justify-between items-start flex">
+            <div className="w-[17.81px] h-[17.81px] relative">Z</div>
+          </div>
+          <div className="w-[19px] h-[19px] relative flex-row justify-between items-start flex">
+            <div className="w-[17.43px] h-[6.95px] relative">A</div>
+          </div>
+          <div className="w-[120px] h-8 relative flex-row justify-between items-start flex">
+            <img
+              className="w-8 h-8 rounded-full"
+              src="https://via.placeholder.com/32x32"
+            />
+            <div>
+              <div className="text-neutral-500 text-[13px] font-semibold">
+                Blaise Defloo
+              </div>
+              <div className="w-[67px] text-neutral-400 text-[11px] font-medium">
+                Administrator
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className="h-[17px] left-[616px] top-[13px] absolute justify-center items-start gap-[27px] inline-flex">
+          <div className="text-zinc-400 text-sm font-semibold cursor-pointer">
+            Dashboard
+          </div>
+          <div className="text-blue-500 text-sm font-semibold cursor-pointer">
+            Trainings
+          </div>
+          <div className="text-zinc-400 text-sm font-semibold cursor-pointer">
+            Users
+          </div>
+          <div className="w-[52px] h-[17px] relative flex-col justify-start items-start flex">
+            <div className="text-zinc-400 text-sm font-semibold cursor-pointer">
               More
-            </a>
-          </li>
-        </ul>
+              <span>X</span>
+            </div>
+          </div>
+        </div>
       </div>
-    </nav>
+    </div>
   );
 };
 
