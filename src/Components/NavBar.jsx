@@ -13,7 +13,25 @@ const NavBar = () => {
             src="https://via.placeholder.com/150x45"
           />
           <div className="w-[392px] h-8 relative flex-col justify-start items-start flex">
-            <div className="absolute pointer-events-auto ..."></div>
+            <div className="absolute pointer-events-auto ...">
+              <span
+                class="input-group-text flex items-center whitespace-nowrap rounded px-3 py-1.5 text-center text-base font-normal text-neutral-700 dark:text-neutral-200"
+                id="basic-addon2"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 20 20"
+                  fill="currentColor"
+                  class="h-5 w-5"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M9 3.5a5.5 5.5 0 100 11 5.5 5.5 0 000-11zM2 9a7 7 0 1112.452 4.391l3.328 3.329a.75.75 0 11-1.06 1.06l-3.329-3.328A7 7 0 012 9z"
+                    clip-rule="evenodd"
+                  />
+                </svg>
+              </span>
+            </div>
             <input
               placeholder="Quick search ..."
               style={{
@@ -21,6 +39,7 @@ const NavBar = () => {
                 height: 32,
                 background: "#F6F6F6",
                 borderRadius: 5,
+                padding: "0px 0px 0 40px",
               }}
             />
           </div>
