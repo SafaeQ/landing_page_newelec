@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { FiBell } from "react-icons/fi";
+import { AiOutlineDown } from "react-icons/ai";
 import DropDown from "../Components/DropDown";
 import DropDownSec from "../Components/DropDownSec";
 
@@ -105,11 +106,16 @@ const NavBar = () => {
           <div className="text-zinc-400 text-sm font-semibold cursor-pointer">
             Users
           </div>
-          <div className="w-[52px] h-[17px] relative flex-col justify-start items-start flex">
+          <div className="w-[52px] h-[17px] relative flex-row justify-center items-center gap-[8px] flex">
             <div className="text-zinc-400 text-sm font-semibold cursor-pointer">
               More
-              <span>X</span>
             </div>
+            <span>
+              <AiOutlineDown
+                color="gray"
+                className="w-4 h-6 mt-1 justify-center"
+              />
+            </span>
           </div>
         </div>
       </div>
