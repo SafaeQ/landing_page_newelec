@@ -9,10 +9,7 @@ const NavBar = () => {
     >
       <div className="w-[1215px] h-[42px] relative">
         <div className="w-[585px] left-0 top-[-2px] absolute justify-center items-center gap-[43px] inline-flex">
-          <img
-            className="w-[150px] h-[45px]"
-            src="logo.jpg"
-          />
+          <img className="w-[150px] h-[45px]" src="logo.jpg" />
           <div className="w-[392px] h-8 relative flex-col justify-start items-start flex">
             <div className="absolute pointer-events-auto ...">
               <span
@@ -46,17 +43,16 @@ const NavBar = () => {
           </div>
         </div>
         <div className="w-52 left-[1106px] top-[5px] absolute justify-end items-center gap-[27px] inline-flex">
-          <div className="w-[19px] h-[19px] relative flex-row justify-between items-center flex">
+          <div className="w-[19px] h-[19px] relative flex-row justify-between items-start flex">
             <div className="w-[17.81px] h-[17.81px] relative">
               <FiBell className="w-4 h-6 rounded-full" color="gray" />
             </div>
           </div>
-          <div className="w-[19px] h-[19px] relative flex-row justify-between items-center flex">
+          <div className="w-[19px] h-[19px] relative flex-row justify-between items-start flex">
             <div className="w-[17.43px] h-[6.95px] relative">
-              <img
-                className="w-8 h-4 rounded-full "
-                src="uk.png"
-              />
+              <button type="button" id="menu-button">
+                <img className="w-8 h-4 rounded-full " src="uk.png" />
+              </button>
             </div>
           </div>
           <div className="w-[120px] h-8 relative flex-row justify-between items-start flex">
@@ -74,7 +70,7 @@ const NavBar = () => {
             </div>
           </div>
         </div>
-        <div className="h-[17px] left-[616px] top-[13px] absolute justify-center items-start gap-[27px] inline-flex">
+        <div className="h-[17px] left-[616px] top-[13px] absolute justify-center items-center gap-[27px] inline-flex">
           <div className="text-zinc-400 text-sm font-semibold cursor-pointer">
             Dashboard
           </div>
