@@ -5,8 +5,9 @@ import CustomSelect from "../Components/CustomSelect";
 const Main = () => {
   const selectOptions = [{ icon: "", label: "Safty" }];
   const selectOptions2 = [{ value: "option1", label: "VCA" }];
+  const selectOptions3 = [{ label: "1 year" }];
+  const selectOptions4 = [{ label: "Internal workers" }];
 
-  const selectOptions3 = [{ value: "option1", label: "1 year" }];
   return (
     <>
       <div className="container flex flex-col gap-4 bg-[#f8fafd]">
@@ -30,9 +31,9 @@ const Main = () => {
         </div>
 
         <div className="flex flex-row gap-6 w-[100%] justify-center">
-          <div className="bg-white rounded-[5px] shadow p-4 flex flex-col">
-            <div className="flex flex-row gap-4 w-[100%]">
-              <div className="w-48 gap-2 flex flex-col">
+          <div className="bg-white rounded-[5px] shadow p-4 flex flex-col gap-4">
+            <div className="flex flex-row gap-3 w-[100%]">
+              <div className="w-44 gap-2 flex flex-col">
                 <div className="flex flex-row justify-between ">
                   <span className="text-zinc-600 text-[13px] font-semibold">
                     Category
@@ -61,7 +62,7 @@ const Main = () => {
                   className="bg-white rounded-[5px] p-1 h-9 w-[100%] border border-zinc-300"
                 />
               </div>
-              <div className="w-32 gap-2 flex flex-col">
+              <div className="w-28 gap-2 flex flex-col">
                 <div className="flex flex-row justify-between ">
                   <span className="text-zinc-600 text-[13px] font-semibold">
                     Valid For
@@ -70,6 +71,31 @@ const Main = () => {
                 <CustomSelect
                   options={selectOptions3}
                   className="bg-white rounded-[5px]  p-1 h-9 w-[100%] border border-zinc-300"
+                />
+              </div>
+            </div>
+            <div className="flex flex-row gap-3 w-[100%]">
+              <div className="w-[18.7rem] gap-2 flex flex-col">
+                <div className="flex flex-row justify-between ">
+                  <span className="text-zinc-600 text-[13px] font-semibold">
+                    Training
+                  </span>
+                </div>
+
+                <input
+                  placeholder="Working at height"
+                  className="bg-white rounded-[5px] p-1 h-9 w-[100%] border border-zinc-300"
+                />
+              </div>
+              <div className="w-52 gap-2 flex flex-col">
+                <div className="flex flex-row justify-between ">
+                  <span className="text-zinc-600 text-[13px] font-semibold">
+                    Assign To
+                  </span>
+                </div>
+                <CustomSelect
+                  options={selectOptions4}
+                  className="bg-white rounded-[5px] p-1 h-9 w-[100%] border border-zinc-300"
                 />
               </div>
             </div>

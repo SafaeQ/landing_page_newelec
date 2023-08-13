@@ -7,7 +7,7 @@ const CustomSelect = ({ options, ...props }) => {
       {...props}
     >
       {options.map((option, index) => (
-        <option key={index} value={option.value}>
+        <option key={index} value={option.value} className="text-zinc-800 text-xs font-semibold">
           {option.label}
         </option>
       ))}
