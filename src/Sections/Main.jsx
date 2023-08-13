@@ -4,7 +4,7 @@ import { IoMdCloudUpload } from "react-icons/io";
 const Main = () => {
   return (
     <>
-      <div class="container flex flex-col gap-4 bg-[#f8fafd]">
+      <div className="container flex flex-col gap-4 bg-[#f8fafd]">
         <div className="w-[100%] h-[37px] relative flex-row justify-end items-center flex p-10">
           <div className="w-[90%] h-[37px] flex-row  gap-[625px] items-end flex ">
             <div className="text-neutral-500 text-lg font-semibold">
@@ -25,15 +25,15 @@ const Main = () => {
         </div>
 
         <div className="flex flex-row gap-6 w-[100%] justify-center">
-          <div className="bg-white rounded-[5px] shadow p-4">1</div>
+          <div className="bg-white w-[532px] h-[311px] rounded-[5px] shadow p-4"></div>
 
           <div className="bg-white rounded-[5px] shadow p-4 flex flex-col items-start justify-start gap-5">
             <span className="text-zinc-600 text-[13px] font-semibold ">
               Image
             </span>
-            <div class="flex items-center justify-center w-full">
-              <label class="flex flex-col rounded-lg border-4 border-dashed w-full h-60 p-10 group text-center cursor-pointer">
-                <div class=" text-center flex flex-col items-center justify-center ">
+            <div className="flex items-center justify-center w-full">
+              <label className="flex flex-col rounded-lg border-4 border-dashed w-full h-60 p-10 group text-center cursor-pointer">
+                <div className=" text-center flex flex-col items-center justify-center ">
                   <IoMdCloudUpload
                     className="has-mask object-center "
                     color="#c8c8c8"
@@ -50,7 +50,7 @@ const Main = () => {
                     </span>
                   </p>
                 </div>
-                <input type="file" class="hidden" />
+                <input type="file" className="hidden" />
               </label>
             </div>
             <p className="text-zinc-400 text-[10px] font-semibold">
@@ -63,8 +63,8 @@ const Main = () => {
               Training file
             </span>
             <div className="w-full flex flex-col gap-3 items-center justify-center">
-              <label class="flex flex-col rounded-lg border-4 border-dashed group text-center cursor-pointer p-2 w-[250px]">
-                <div class=" text-center flex flex-col items-center justify-center ">
+              <label className="flex flex-col rounded-lg border-4 border-dashed group text-center cursor-pointer p-2 w-[250px]">
+                <div className=" text-center flex flex-col items-center justify-center ">
                   <IoMdCloudUpload
                     className="has-mask object-center "
                     color="#c8c8c8"
@@ -81,7 +81,7 @@ const Main = () => {
                     </span>
                   </p>
                 </div>
-                <input type="file" class="hidden" />
+                <input type="file" className="hidden" />
               </label>
               <div className="w-full relative flex items-center justify-center">
                 <div className="w-full p-2 bg-green-500 rounded-[5px]">
