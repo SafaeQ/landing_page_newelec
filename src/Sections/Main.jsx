@@ -31,7 +31,7 @@ const Main = () => {
         </div>
 
         <div className="flex flex-row gap-6 w-[100%] justify-center">
-          <div className="bg-white rounded-[5px] shadow p-4 flex flex-col gap-4">
+          <div className="bg-white rounded-[5px] shadow p-6 flex flex-col gap-4">
             <div className="flex flex-row gap-3 w-[100%]">
               <div className="w-44 gap-2 flex flex-col">
                 <div className="flex flex-row justify-between ">
@@ -99,6 +99,58 @@ const Main = () => {
                 />
               </div>
             </div>
+            <div className="flex flex-row gap-3 w-[100%]">
+              <div className="w-[85%] flex flex-col gap-4">
+                <div className="gap-3 flex flex-col">
+                  <div className="flex flex-row justify-between">
+                    <span className="text-zinc-600 text-xs font-semibold">
+                      Departments
+                    </span>
+                    <span className="text-zinc-400 text-[10px] font-semibold">
+                      Optional
+                    </span>
+                  </div>
+                  <select
+                    className="bg-white  rounded-[5px] p-2 h-10 w-[100%] border border-zinc-300"
+                    placeholder="Select departments"
+                  >
+                    <option className="text-zinc-300  text-xs font-normal">
+                      Select departments
+                    </option>
+                  </select>
+                </div>
+                <div className="gap-3 flex flex-col">
+                  <div className="flex flex-row justify-between">
+                    <span className="text-zinc-600 text-xs font-semibold">
+                      Functions
+                    </span>
+                    <span className="text-zinc-400 text-[10px] font-semibold">
+                      Optional
+                    </span>
+                  </div>
+                  <select
+                    className="bg-white rounded-[5px] p-2 h-10 w-[100%] border border-zinc-300"
+                    placeholder="Select functions"
+                  >
+                    <option className="text-zinc-300  text-xs font-normal">
+                      Select functions
+                    </option>
+                  </select>
+                </div>
+              </div>
+              <div className="w-[100%] flex flex-col gap-4 justify-start items-start ">
+                <span className="text-zinc-600 text-xs font-semibold">
+                  Description
+                </span>
+                <textarea
+                  rows={4}
+                  type="text"
+                  placeholder="Type here .."
+                  
+                  className="w-full p-2 rounded border-2 border-gray-200 "
+                />
+              </div>
+            </div>
           </div>
 
           <div className="bg-white rounded-[5px] shadow p-4 flex flex-col items-start justify-start gap-5">
@@ -111,7 +163,7 @@ const Main = () => {
                   <IoMdCloudUpload
                     className="has-mask object-center "
                     color="#c8c8c8"
-                    size={100}
+                    size={50}
                   />
                   <p className="text-center">
                     <span className="text-zinc-400 text-xs font-normal leading-[17px]">
@@ -136,13 +188,13 @@ const Main = () => {
             <span className="text-zinc-600 text-[13px] font-semibold">
               Training file
             </span>
-            <div className="w-full flex flex-col gap-3 items-center justify-center">
-              <label className="flex flex-col rounded-lg border-4 border-dashed group text-center cursor-pointer p-2 w-[250px]">
+            <div className="w-full flex flex-col gap-2 items-center justify-center">
+              <label className="flex flex-col rounded-lg border-4 border-dashed group text-center cursor-pointer p-2 ">
                 <div className=" text-center flex flex-col items-center justify-center ">
                   <IoMdCloudUpload
                     className="has-mask object-center "
                     color="#c8c8c8"
-                    size={80}
+                    size={50}
                   />
                   <p className="text-center">
                     <span className="text-zinc-400 text-xs font-normal leading-[17px]">
@@ -176,7 +228,7 @@ const Main = () => {
                   </div>
                 </div>
               </div>
-              <span className="text-zinc-400 text-[11px] font-semibold flex items-start">
+              <span className="text-zinc-400 text-[9px] font-semibold flex items-start">
                 *Only Video, PDF and SlideShow
                 <br />
                 files are allowed.
