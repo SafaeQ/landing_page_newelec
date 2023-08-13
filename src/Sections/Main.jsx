@@ -1,9 +1,10 @@
 import React from "react";
+import { IoMdCloudUpload } from "react-icons/io";
 
 const Main = () => {
   return (
     <>
-      <div class="grid grid-rows-4 gap-4 bg-[#f8fafd]">
+      <div class="container flex flex-col gap-4 bg-[#f8fafd]">
         <div className="w-[100%] h-[37px] relative flex-row justify-end items-center flex p-10">
           <div className="w-[90%] h-[37px] flex-row  gap-[625px] items-end flex ">
             <div className="text-neutral-500 text-lg font-semibold">
@@ -23,36 +24,40 @@ const Main = () => {
           </div>
         </div>
 
-        <div className="grid grid-cols-12 grid-rows-4 gap-6 w-[90%] justify-end ">
-          <div className="col-span-6 row-span-4 col-start-2 bg-white rounded-[5px] shadow">
-            1
-          </div>
-          <div className="col-span-3 row-span-4 col-start-8  bg-white rounded-[5px] shadow p-4 flex flex-col gap-5">
-            <span className="text-zinc-600 text-[13px] font-semibold flex justify-start">
+        <div className="flex flex-row gap-6 w-[100%] justify-center">
+          <div className="bg-white rounded-[5px] shadow p-4">1</div>
+
+          <div className="bg-white rounded-[5px] shadow p-4 flex flex-col items-start justify-start gap-5">
+            <span className="text-zinc-600 text-[13px] font-semibold ">
               Image
             </span>
-            <div className="grid grid-cols-1 space-y-2">
-              <label className="flex flex-col rounded-lg border-2 border-dashed group text-center">
-                <div className=" text-center flex flex-col items-center justify-center  ">
-                  <p className="pointer-none text-gray-500 ">
-                    <span className="text-sm">Drag and drop</span> files here{" "}
-                    <br /> or
-                    <a href="" id="" className="text-blue-600 hover:underline">
-                      select a file
-                    </a>
-                    from your computer
+            <div class="flex items-center justify-center w-full">
+              <label class="flex flex-col rounded-lg border-4 border-dashed w-full h-60 p-10 group text-center cursor-pointer">
+                <div class=" text-center flex flex-col items-center justify-center ">
+                  <IoMdCloudUpload
+                    className="has-mask object-center "
+                    color="#c8c8c8"
+                    size={100}
+                  />
+                  <p className="text-center">
+                    <span className="text-zinc-400 text-xs font-normal leading-[17px]">
+                      Drag and drop your image here
+                      <br />
+                      Or{" "}
+                    </span>
+                    <span className="text-sky-600 text-xs font-normal leading-[17px]">
+                      browse files
+                    </span>
                   </p>
                 </div>
-                <input type="file" className="hidden" />
+                <input type="file" class="hidden" />
               </label>
             </div>
             <p className="text-zinc-400 text-[10px] font-semibold">
               *Only JPG, PNG files are allowed. Image must be less than 2 MB
             </p>
           </div>
-          <div className="col-span-2 row-span-4 col-start-11 bg-white rounded-[5px] shadow">
-            4
-          </div>
+          <div className="bg-white rounded-[5px] shadow">4</div>
         </div>
         <div>09</div>
       </div>
