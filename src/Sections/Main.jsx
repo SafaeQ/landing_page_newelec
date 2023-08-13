@@ -1,7 +1,12 @@
 import React from "react";
 import { IoMdCloudUpload } from "react-icons/io";
+import CustomSelect from "../Components/CustomSelect";
 
 const Main = () => {
+  const selectOptions = [{ icon: "", label: "Safty" }];
+  const selectOptions2 = [{ value: "option1", label: "VCA" }];
+
+  const selectOptions3 = [{ value: "option1", label: "1 year" }];
   return (
     <>
       <div className="container flex flex-col gap-4 bg-[#f8fafd]">
@@ -25,7 +30,50 @@ const Main = () => {
         </div>
 
         <div className="flex flex-row gap-6 w-[100%] justify-center">
-          <div className="bg-white w-[532px] h-[311px] rounded-[5px] shadow p-4"></div>
+          <div className="bg-white rounded-[5px] shadow p-4 flex flex-col">
+            <div className="flex flex-row gap-4 w-[100%]">
+              <div className="w-48 gap-2 flex flex-col">
+                <div className="flex flex-row justify-between ">
+                  <span className="text-zinc-600 text-[13px] font-semibold">
+                    Category
+                  </span>
+                  <button className="btn border-t-neutral-50 text-blue-500 text-xs font-semibold">
+                    Add new +
+                  </button>
+                </div>
+
+                <CustomSelect
+                  options={selectOptions}
+                  className="bg-white rounded-[5px] p-1 h-9 w-[100%] border border-zinc-300"
+                />
+              </div>
+              <div className="w-52 gap-2 flex flex-col">
+                <div className="flex flex-row justify-between ">
+                  <span className="text-zinc-600 text-[13px] font-semibold">
+                    Topic
+                  </span>
+                  <button className="btn border-t-neutral-50 text-blue-500 text-xs font-semibold">
+                    Add new +
+                  </button>
+                </div>
+                <CustomSelect
+                  options={selectOptions2}
+                  className="bg-white rounded-[5px] p-1 h-9 w-[100%] border border-zinc-300"
+                />
+              </div>
+              <div className="w-32 gap-2 flex flex-col">
+                <div className="flex flex-row justify-between ">
+                  <span className="text-zinc-600 text-[13px] font-semibold">
+                    Valid For
+                  </span>
+                </div>
+                <CustomSelect
+                  options={selectOptions3}
+                  className="bg-white rounded-[5px]  p-1 h-9 w-[100%] border border-zinc-300"
+                />
+              </div>
+            </div>
+          </div>
 
           <div className="bg-white rounded-[5px] shadow p-4 flex flex-col items-start justify-start gap-5">
             <span className="text-zinc-600 text-[13px] font-semibold ">
