@@ -106,7 +106,7 @@ const NavBar = () => {
             <button type="button" onClick={toggleDropdownSecond}>
               <img
                 className="w-8 h-8 rounded-full"
-                src="https://via.placeholder.com/32x32"
+                src="profile.jpeg"
               />
             </button>
             {isOpened && <DropDownSec />}
