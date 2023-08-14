@@ -57,12 +57,12 @@ const Home = () => {
               Edit Training “Working At Height”
             </div>
             <div className="flex-row gap-[15px] flex justify-between items-center">
-              <div className="text-zinc-400 text-[13px] font-bold pt-2">
+              <div className="text-zinc-400 text-[13px] font-bold pt-2 cursor-pointer">
                 Cancel
               </div>
               <div className="w-[147px] h-[35px] relative">
                 <div className="w-[147px] h-[35px] left-0 top-0 absolute bg-orange-500 rounded-[5px]" />
-                <div className="left-[28px] top-[8px] absolute text-white text-sm font-bold">
+                <div className="left-[28px] top-[8px] absolute text-white text-sm font-bold cursor-pointer">
                   Update & Save
                 </div>
               </div>
