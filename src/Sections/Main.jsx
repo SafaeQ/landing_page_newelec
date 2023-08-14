@@ -5,11 +5,16 @@ import Section2 from "./Section2";
 import AliceCarousel from "react-alice-carousel";
 import "react-alice-carousel/lib/alice-carousel.css";
 import {
+  AiFillCheckCircle,
   AiOutlineInfoCircle,
   AiOutlineMinus,
   AiOutlinePlus,
 } from "react-icons/ai";
-import { IoDiceOutline } from "react-icons/io5";
+import { IoDiceOutline, IoReloadCircleSharp } from "react-icons/io5";
+import CustomCard from "../Components/CustomCard";
+import { MdOutlineTimer } from "react-icons/md";
+import { RiTimeLine } from "react-icons/ri";
+import CustomCardSec from "../Components/CustomCardSec";
 
 const Main = () => {
   const selectOptions = [{ icon: "", label: "Safty" }];
@@ -18,36 +23,37 @@ const Main = () => {
   const selectOptions4 = [{ label: "Internal workers" }];
 
   const items = [
-    <div className="h-[156px] bg-white rounded-[5px] shadow ml-2 p-3 gap-3 flex flex-col">
-      <div className=" h-4 relative flex justify-end">
-        <AiOutlineInfoCircle color="gray" size={20} />
-      </div>
-      <div className="flex flex-col justify-center items-center gap-2">
-        <IoDiceOutline color="#2A5F9E" size={40} />
-        <span className="text-zinc-800 text-xs font-semibold">
-          Random questions
-        </span>
-      </div>
-      <div>
-        <div className="h-[30px] relative flex-row justify-start items-start inline-flex gap-2">
-          <button className="w-[34px] h-[30px] bg-zinc-100 rounded-[5px] p-2">
-            <AiOutlineMinus color="#C8C8C8" />
-          </button>
-          <div className="w-[76px] h-[30px] rounded-[5px] border border-blue-500 p-1">
-            <span className="text-blue-500 text-sm font-semibold">10</span>
-          </div>
-          <button className="w-[34px] h-[30px] relative bg-zinc-100 rounded-[5px] p-2">
-            <AiOutlinePlus color="#C8C8C8" />
-          </button>
-        </div>
-      </div>
-    </div>,
-    <div className="h-[156px] bg-white rounded-[5px] shadow ml-2">h2</div>,
-    <div className="h-[156px] bg-white rounded-[5px] shadow ml-2">h3</div>,
-    <div className="h-[156px] bg-white rounded-[5px] shadow ml-2">h4</div>,
-    <div className="h-[156px] bg-white rounded-[5px] shadow ml-2">h5</div>,
-    <div className="h-[156px] bg-white rounded-[5px] shadow ml-2">h6</div>,
-    <div className="h-[156px] bg-white rounded-[5px] shadow ml-2">h</div>,
+    <CustomCard
+      icon={<IoDiceOutline color="#2A5F9E" size={40} />}
+      title="Random questions"
+      number={10}
+      unit={''}
+    />,
+    <CustomCard
+      icon={<MdOutlineTimer color="#FF964D" size={40} />}
+      title="Time per question"
+      number={45}
+      unit={'s'}
+    />,
+    <CustomCard
+      icon={<AiFillCheckCircle color="#47CA5B" size={40} />}
+      title="Passing score"
+      number={80}
+      unit={'%'}
+    />,
+    <CustomCardSec />,
+    <CustomCard
+      icon={<RiTimeLine color="#8C2CAE" size={40} />}
+      title="Time Expected"
+      number={30}
+      unit={'min'}
+    />,
+    <CustomCard
+      icon={<IoReloadCircleSharp color="#B5B5B5" size={40} />}
+      title="Attemps"
+      number={3}
+      unit={''}
+    />,
   ];
   return (
     <>
