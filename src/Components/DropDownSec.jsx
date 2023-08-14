@@ -13,8 +13,7 @@ const DropDownSec = () => {
       tabindex="-1"
     >
       <div className="py-1 flex" role="none">
-        <a
-          href="#"
+        <span
           className="text-gray-700 flex px-4 py-2 text-sm flex-col justify-start"
           role="menuitem"
           tabindex="-1"
@@ -24,11 +23,10 @@ const DropDownSec = () => {
           <div className="text-neutral-500 text-xs font-normal">
             besix.group@besix.be
           </div>
-        </a>
+        </span>
       </div>
       <div className="py-1" role="none">
-        <a
-          href="#"
+        <span
           className="text-gray-700 flex px-4 py-2 text-sm"
           role="menuitem"
           tabindex="-1"
@@ -39,9 +37,8 @@ const DropDownSec = () => {
             color="gray"
           />
           <span>Profile settings</span>
-        </a>
-        <a
-          href="#"
+        </span>
+        <span
           className="text-gray-700 flex px-4 py-2 text-sm"
           role="menuitem"
           tabindex="-1"
@@ -52,11 +49,10 @@ const DropDownSec = () => {
             className="w-6 h-6 rounded-full mr-2 justify-center"
           />
           <span>Our policies</span>
-        </a>
+        </span>
       </div>
       <div className="py-1" role="none">
-        <a
-          href="#"
+        <span
           className="text-gray-700 flex px-4 py-2 text-sm"
           role="menuitem"
           tabindex="-1"
@@ -67,7 +63,7 @@ const DropDownSec = () => {
             className="w-6 h-6 rounded-full mr-2 justify-center"
           />
           <span>Log Out</span>
-        </a>
+        </span>
       </div>
     </div>
   );

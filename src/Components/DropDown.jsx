@@ -12,8 +12,7 @@ const DropDown = ({ options }) => {
       <div className="py-1 " role="none">
         {options.map((option, i) => (
           <>
-            <a
-              href="#"
+            <span
               className={`text-[#ADADAD] px-4 py-2 text-sm flex justify-normal hover:bg-gray-200 ${
                 i === 0 ? "text-black" : ""
               }`}
@@ -25,9 +24,10 @@ const DropDown = ({ options }) => {
               <img
                 className="w-6 h-6 rounded-full mr-2 justify-center"
                 src={option.img}
+                alt=""
               />
               <span>{option.label}</span>
-            </a>
+            </span>
           </>
         ))}
       </div>

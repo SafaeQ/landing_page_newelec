@@ -1,9 +1,5 @@
 import React from "react";
-import {
-  AiOutlineInfoCircle,
-  AiOutlineMinus,
-  AiOutlinePlus,
-} from "react-icons/ai";
+import { AiOutlineInfoCircle } from "react-icons/ai";
 import { BiCameraHome } from "react-icons/bi";
 
 const CustomCardSec = () => {

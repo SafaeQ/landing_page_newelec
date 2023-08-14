@@ -82,8 +82,8 @@ const Section1 = () => {
                 Working at height
               </div>
               <div className="flex flex-row items-center">
-                <img className="w-[20px] h-[20px]" src="jump.png" />
-                <img className="w-[16px] h-[16px]" src="Vect.png" />
+                <img className="w-[20px] h-[20px]" src="jump.png" alt=""/>
+                <img className="w-[16px] h-[16px]" src="Vect.png" alt=""/>
               </div>
             </div>
           </div>

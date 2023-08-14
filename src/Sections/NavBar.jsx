@@ -32,6 +32,7 @@ const NavBar = () => {
             <img
               className="w-[150px] h-[45px] top-[-8px] relative"
               src="logo.jpg"
+              alt=""
             />
             <div className="w-[392px] h-8 relative flex-col justify-start items-start flex">
               <div className="absolute pointer-events-auto ...">
@@ -97,7 +98,7 @@ const NavBar = () => {
           <div className="w-[19px] h-[19px] relative flex-row justify-between items-start flex">
             <div className="w-[17.43px] h-[6.95px] relative top-2">
               <button type="button" id="menu-button" onClick={toggleDropdown}>
-                <img className="w-8 h-4 rounded-full " src="uk.png" />
+                <img className="w-8 h-4 rounded-full " src="uk.png" alt=""/>
               </button>
               {isOpen && <DropDown options={dropdownOptions} />}
             </div>
@@ -107,6 +108,7 @@ const NavBar = () => {
               <img
                 className="w-8 h-8 rounded-full"
                 src="profile.jpeg"
+                alt=""
               />
             </button>
             {isOpened && <DropDownSec />}
