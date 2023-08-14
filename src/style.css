@@ -4,7 +4,8 @@
 }
 
 .alice-carousel__wrapper {
-    height: 165px;
+    height: 185px;
+    overflow-x: auto;
 }
 
 /* Styling for navigation arrows */
@@ -50,4 +51,25 @@
     color: #B5B5B5;
     font-size: 24px;
     font-weight: bold;
+}
+
+/* Scrollbar styling */
+.alice-carousel__wrapper::-webkit-scrollbar {
+    /* width: auto; */
+    scrollbar-width: none;
+    height: 9px;
+    background-color: #E1EAF0;
+}
+
+.alice-carousel__wrapper::-webkit-scrollbar-thumb {
+    background-color: #2C8EFF;
+    border-radius: 4px;
+}
+
+.alice-carousel__wrapper::-webkit-scrollbar-thumb:hover {
+    background-color: #2C8EFF;
+}
+
+.alice-carousel__dots-item:not(.__custom):hover, .alice-carousel__dots-item:not(.__custom).__active {
+    display: none;
 }
