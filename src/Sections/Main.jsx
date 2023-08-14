@@ -2,8 +2,14 @@ import React from "react";
 import { IoMdCloudUpload } from "react-icons/io";
 import CustomSelect from "../Components/CustomSelect";
 import Section2 from "./Section2";
-import "react-responsive-carousel/lib/styles/carousel.min.css";
-import { Carousel } from "react-responsive-carousel";
+import AliceCarousel from "react-alice-carousel";
+import "react-alice-carousel/lib/alice-carousel.css";
+import {
+  AiOutlineInfoCircle,
+  AiOutlineMinus,
+  AiOutlinePlus,
+} from "react-icons/ai";
+import { IoDiceOutline } from "react-icons/io5";
 
 const Main = () => {
   const selectOptions = [{ icon: "", label: "Safty" }];
@@ -11,6 +17,38 @@ const Main = () => {
   const selectOptions3 = [{ label: "1 year" }];
   const selectOptions4 = [{ label: "Internal workers" }];
 
+  const items = [
+    <div className="h-[156px] bg-white rounded-[5px] shadow ml-2 p-3 gap-3 flex flex-col">
+      <div className=" h-4 relative flex justify-end">
+        <AiOutlineInfoCircle color="gray" size={20} />
+      </div>
+      <div className="flex flex-col justify-center items-center gap-2">
+        <IoDiceOutline color="#2A5F9E" size={40} />
+        <span className="text-zinc-800 text-xs font-semibold">
+          Random questions
+        </span>
+      </div>
+      <div>
+        <div className="h-[30px] relative flex-row justify-start items-start inline-flex gap-2">
+          <button className="w-[34px] h-[30px] bg-zinc-100 rounded-[5px] p-2">
+            <AiOutlineMinus color="#C8C8C8" />
+          </button>
+          <div className="w-[76px] h-[30px] rounded-[5px] border border-blue-500 p-1">
+            <span className="text-blue-500 text-sm font-semibold">10</span>
+          </div>
+          <button className="w-[34px] h-[30px] relative bg-zinc-100 rounded-[5px] p-2">
+            <AiOutlinePlus color="#C8C8C8" />
+          </button>
+        </div>
+      </div>
+    </div>,
+    <div className="h-[156px] bg-white rounded-[5px] shadow ml-2">h2</div>,
+    <div className="h-[156px] bg-white rounded-[5px] shadow ml-2">h3</div>,
+    <div className="h-[156px] bg-white rounded-[5px] shadow ml-2">h4</div>,
+    <div className="h-[156px] bg-white rounded-[5px] shadow ml-2">h5</div>,
+    <div className="h-[156px] bg-white rounded-[5px] shadow ml-2">h6</div>,
+    <div className="h-[156px] bg-white rounded-[5px] shadow ml-2">h</div>,
+  ];
   return (
     <>
       <div className="flex flex-col gap-4 bg-[#f8fafd]">
@@ -279,15 +317,16 @@ const Main = () => {
             </button>
           </div>
           <div className="w-full rounded-[5px] p-4 flex flex-row gap-4 mt-4">
-            <Carousel showThumbs={false} showStatus={false} showIndicators={false} emulateTouch infiniteLoop>
-              <div className="h-[156px] bg-white rounded-[5px] shadow">h1</div>
-              <div className="h-[156px] bg-white rounded-[5px] shadow">h2</div>
-              <div className="h-[156px] bg-white rounded-[5px] shadow">h3</div>
-              <div className="h-[156px] bg-white rounded-[5px] shadow">h4</div>
-              <div className="h-[156px] bg-white rounded-[5px] shadow">h5</div>
-              <div className="h-[156px] bg-white rounded-[5px] shadow">h6</div>
-              <div className="h-[156px] bg-white rounded-[5px] shadow">h</div>
-            </Carousel>
+            <AliceCarousel
+              mouseTracking
+              items={items}
+              responsive={{
+                0: { items: 2 }, // On small screens, show 1 item
+                768: { items: 4 }, // On medium screens, show 2 items
+                1024: { items: 6 }, // On large screens, show 3 items
+              }}
+              infinite
+            />
           </div>
         </div>
       </div>
