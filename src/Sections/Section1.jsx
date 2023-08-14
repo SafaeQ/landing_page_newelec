@@ -44,7 +44,6 @@ const Section1 = () => {
             </div>
             <CustomSelect
               options={selectOptions2}
-              // icon={"jump.png"}
               styleImage={{
                 backgroundImage: `url("jump.png")`,
                 paddingLeft: "2rem",
@@ -75,10 +74,18 @@ const Section1 = () => {
               </span>
             </div>
 
-            <input
+            <div
               placeholder="Working at height"
-              className="bg-white rounded-[5px] p-3 h-9 w-[100%] border border-zinc-300"
-            />
+              className="bg-white flex flex-row justify-between rounded-[5px] p-2 h-9 w-[100%] border border-zinc-300"
+            >
+              <div className="text-zinc-800 text-xs font-semibold">
+                Working at height
+              </div>
+              <div className="flex flex-row items-center">
+                <img className="w-[20px] h-[20px]" src="jump.png" />
+                <img className="w-[16px] h-[16px]" src="Vect.png" />
+              </div>
+            </div>
           </div>
           <div className="w-52 gap-2 flex flex-col">
             <div className="flex flex-row justify-between ">
