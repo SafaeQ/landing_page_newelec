@@ -1,10 +1,11 @@
 import React from "react";
 
-const CustomSelect = ({ options, icon, ...props }) => {
+const CustomSelect = ({ options, styleImage, ...props }) => {
   return (
     <select
       className="border rounded p-2 focus:ring focus:ring-rose-300 focus:border-rose-500"
       {...props}
+      style={styleImage}
     >
       {options.map((option, index) => (
         <option
@@ -12,7 +13,7 @@ const CustomSelect = ({ options, icon, ...props }) => {
           value={option.value}
           className="text-zinc-800 text-xs font-semibold"
         >
-          <div>{icon}</div> {option.label}
+          {option.label}
         </option>
       ))}
     </select>

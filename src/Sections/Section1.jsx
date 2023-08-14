@@ -23,7 +23,13 @@ const Section1 = () => {
 
             <CustomSelect
               options={selectOptions}
-              icon={<img src="vest.png" className="w-9 h-9" alt="" />}
+              styleImage={{
+                backgroundImage: `url("vest.png")`,
+                paddingLeft: "2rem",
+                backgroundSize: "1.5rem auto",
+                backgroundRepeat: "no-repeat",
+                backgroundPosition: "0.5rem center",
+              }}
               className="bg-white rounded-[5px] p-1 h-9 w-[100%] border border-zinc-300"
             />
           </div>
@@ -38,6 +44,14 @@ const Section1 = () => {
             </div>
             <CustomSelect
               options={selectOptions2}
+              // icon={"jump.png"}
+              styleImage={{
+                backgroundImage: `url("jump.png")`,
+                paddingLeft: "2rem",
+                backgroundSize: "1.5rem auto",
+                backgroundRepeat: "no-repeat",
+                backgroundPosition: "0.5rem center",
+              }}
               className="bg-white rounded-[5px] p-1 h-9 w-[100%] border border-zinc-300"
             />
           </div>
