@@ -4,17 +4,13 @@ import CustomSelect from "../Components/CustomSelect";
 import Section2 from "./Section2";
 import AliceCarousel from "react-alice-carousel";
 import "react-alice-carousel/lib/alice-carousel.css";
-import {
-  AiFillCheckCircle,
-  AiOutlineInfoCircle,
-  AiOutlineMinus,
-  AiOutlinePlus,
-} from "react-icons/ai";
+import { AiFillCheckCircle } from "react-icons/ai";
 import { IoDiceOutline, IoReloadCircleSharp } from "react-icons/io5";
 import CustomCard from "../Components/CustomCard";
 import { MdOutlineTimer } from "react-icons/md";
 import { RiTimeLine } from "react-icons/ri";
 import CustomCardSec from "../Components/CustomCardSec";
+import "./style.css";
 
 const Main = () => {
   const selectOptions = [{ icon: "", label: "Safty" }];
@@ -27,32 +23,32 @@ const Main = () => {
       icon={<IoDiceOutline color="#2A5F9E" size={40} />}
       title="Random questions"
       number={10}
-      unit={''}
+      unit={""}
     />,
     <CustomCard
       icon={<MdOutlineTimer color="#FF964D" size={40} />}
       title="Time per question"
       number={45}
-      unit={'s'}
+      unit={"s"}
     />,
     <CustomCard
       icon={<AiFillCheckCircle color="#47CA5B" size={40} />}
       title="Passing score"
       number={80}
-      unit={'%'}
+      unit={"%"}
     />,
     <CustomCardSec />,
     <CustomCard
       icon={<RiTimeLine color="#8C2CAE" size={40} />}
       title="Time Expected"
       number={30}
-      unit={'min'}
+      unit={"min"}
     />,
     <CustomCard
       icon={<IoReloadCircleSharp color="#B5B5B5" size={40} />}
       title="Attemps"
       number={3}
-      unit={''}
+      unit={""}
     />,
   ];
   return (
@@ -322,7 +318,7 @@ const Main = () => {
               </span>
             </button>
           </div>
-          <div className="w-full rounded-[5px] p-4 flex flex-row gap-4 mt-4">
+          <div className=" carousel-container w-full rounded-[5px] p-4 flex flex-row gap-4 mt-2">
             <AliceCarousel
               mouseTracking
               items={items}
