@@ -224,12 +224,12 @@ const Main = () => {
               </p>
             </div>
 
-            <div className="bg-white w-[80%] rounded-[5px] shadow p-4 flex flex-col items-start justify-start gap-5">
+            <div className="bg-white w-[50%] rounded-[5px] shadow p-4 flex flex-col items-start justify-start gap-5">
               <span className="text-zinc-600 text-[13px] font-semibold">
                 Training file
               </span>
               <div className="w-full flex flex-col gap-2 items-center justify-center">
-                <label className="flex flex-col rounded-lg border-4 border-dashed group text-center cursor-pointer p-2 ">
+                <label className="w-full flex flex-col rounded-lg border-4 border-dashed group text-center cursor-pointer p-2 ">
                   <div className=" text-center flex flex-col items-center justify-center ">
                     <IoMdCloudUpload
                       className="has-mask object-center "
@@ -268,25 +268,25 @@ const Main = () => {
                     </div>
                   </div>
                 </div>
-                <span className="text-zinc-400 text-[9px] font-semibold flex items-start">
+                <span className="text-zinc-400 text-[9px] font-semibold flex items-start justify-start">
                   *Only Video, PDF and SlideShow
                   <br />
                   files are allowed.
                 </span>
-                <div className="w-[177px] h-[13px] justify-center items-center gap-[5px] inline-flex">
-                  <div className="w-[75px] h-[0px] border border-gray-200"></div>
+                <div className="w-full h-[13px] justify-center items-center gap-[5px] inline-flex">
+                  <div className="w-full h-[0px] border border-gray-200"></div>
                   <div className="text-neutral-400 text-[11px] font-bold">
                     OR
                   </div>
-                  <div className="w-[75px] h-[0px] border border-gray-200"></div>
+                  <div className="w-full h-[0px] border border-gray-200"></div>
                 </div>
-                <div className="w-[177px] h-[49px] flex-col justify-center items-start gap-[5px] inline-flex">
+                <div className="w-full h-[49px] flex-col justify-center items-start gap-[5px] inline-flex">
                   <div className="text-zinc-600 text-[13px] font-semibold">
                     Media URL
                   </div>
-                  <div className="w-[177px] h-7 relative flex-col justify-start items-start flex">
+                  <div className="w-full h-7 relative flex-col justify-start items-start flex">
                     <input
-                      className="text-zinc-400 text-[11px] p-2 font-semibold w-[177px] h-7 bg-white rounded-[5px] border border-zinc-300"
+                      className="text-zinc-400 text-[11px] p-2 font-semibold w-full h-7 bg-white rounded-[5px] border border-zinc-300"
                       placeholder="https://youtu.be/1g4hoZx8-o4"
                     />
                   </div>
@@ -318,7 +318,7 @@ const Main = () => {
               </span>
             </button>
           </div>
-          <div className=" carousel-container w-full rounded-[5px] p-4 flex flex-row gap-4 mt-2">
+          <div className=" carousel-container w-full h-full rounded-[5px] p-4 flex flex-row gap-4 mt-2">
             <AliceCarousel
               mouseTracking
               items={items}

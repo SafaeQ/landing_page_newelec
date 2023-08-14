@@ -19,7 +19,7 @@ const CustomCard = ({ icon, title, number, unit }) => {
   };
 
   return (
-    <div className="h-[156px] bg-white rounded-[5px] shadow ml-2 p-3 gap-3 flex flex-col">
+    <div className=" bg-white rounded-[5px] shadow ml-2 p-3 gap-3 flex flex-col">
       <div className="h-4 relative flex justify-end">
         <AiOutlineInfoCircle color="gray" size={20} />
       </div>
