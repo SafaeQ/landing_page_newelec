@@ -98,18 +98,14 @@ const NavBar = () => {
           <div className="w-[19px] h-[19px] relative flex-row justify-between items-start flex">
             <div className="w-[17.43px] h-[6.95px] relative top-2">
               <button type="button" id="menu-button" onClick={toggleDropdown}>
-                <img className="w-8 h-4 rounded-full " src="uk.png" alt=""/>
+                <img className="w-8 h-4 rounded-full " src="uk.png" alt="" />
               </button>
               {isOpen && <DropDown options={dropdownOptions} />}
             </div>
           </div>
           <div className="w-[120px] h-8 relative flex-row justify-between items-start flex">
             <button type="button" onClick={toggleDropdownSecond}>
-              <img
-                className="w-8 h-8 rounded-full"
-                src="profile.jpeg"
-                alt=""
-              />
+              <img className="w-8 h-8 rounded-full" src="profile.jpeg" alt="" />
             </button>
             {isOpened && <DropDownSec />}
             <div>

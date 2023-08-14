@@ -7,17 +7,17 @@ const DropDown = ({ options }) => {
       role="menu"
       aria-orientation="vertical"
       aria-labelledby="menu-button"
-      tabindex="-1"
+      tabIndex="-1"
     >
       <div className="py-1 " role="none">
         {options.map((option, i) => (
-          <>
+          <div key={i}>
             <span
               className={`text-[#ADADAD] px-4 py-2 text-sm flex justify-normal hover:bg-gray-200 ${
                 i === 0 ? "text-black" : ""
               }`}
               role="menuitem"
-              tabindex="-1"
+              tabIndex="-1"
               id="menu-item-0"
               key={i}
             >
@@ -28,7 +28,7 @@ const DropDown = ({ options }) => {
               />
               <span>{option.label}</span>
             </span>
-          </>
+          </div>
         ))}
       </div>
     </div>

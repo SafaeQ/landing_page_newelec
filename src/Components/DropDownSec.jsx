@@ -10,13 +10,13 @@ const DropDownSec = () => {
       role="menu"
       aria-orientation="vertical"
       aria-labelledby="menu-button"
-      tabindex="-1"
+      tabIndex="-1"
     >
       <div className="py-1 flex" role="none">
         <span
           className="text-gray-700 flex px-4 py-2 text-sm flex-col justify-start"
           role="menuitem"
-          tabindex="-1"
+          tabIndex="-1"
           id="menu-item-0"
         >
           <div className="text-zinc-800 text-xs font-bold flex">BESIX Group</div>
@@ -29,7 +29,7 @@ const DropDownSec = () => {
         <span
           className="text-gray-700 flex px-4 py-2 text-sm"
           role="menuitem"
-          tabindex="-1"
+          tabIndex="-1"
           id="menu-item-2"
         >
           <IoSettingsSharp
@@ -41,7 +41,7 @@ const DropDownSec = () => {
         <span
           className="text-gray-700 flex px-4 py-2 text-sm"
           role="menuitem"
-          tabindex="-1"
+          tabIndex="-1"
           id="menu-item-2"
         >
           <MdOutlinePrivacyTip
@@ -55,7 +55,7 @@ const DropDownSec = () => {
         <span
           className="text-gray-700 flex px-4 py-2 text-sm"
           role="menuitem"
-          tabindex="-1"
+          tabIndex="-1"
           id="menu-item-4"
         >
           <RiLogoutBoxRFill
