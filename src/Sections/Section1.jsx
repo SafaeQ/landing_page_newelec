@@ -11,7 +11,7 @@ const Section1 = () => {
     <div className="flex w-full flex-row gap-4 justify-end mt-8">
       <div className="bg-white w-full rounded-[5px] shadow p-6 flex flex-col gap-4">
         <div className="flex flex-row gap-3 w-[100%]">
-          <div className="w-44 gap-2 flex flex-col">
+          <div className="w-[34%] gap-2 flex flex-col">
             <div className="flex flex-row justify-between ">
               <span className="text-zinc-600 text-[13px] font-semibold">
                 Category
@@ -33,7 +33,7 @@ const Section1 = () => {
               className="bg-white rounded-[5px] p-1 h-9 w-[100%] border border-zinc-300"
             />
           </div>
-          <div className="w-52 gap-2 flex flex-col">
+          <div className="w-[43%] gap-2 flex flex-col">
             <div className="flex flex-row justify-between ">
               <span className="text-zinc-600 text-[13px] font-semibold">
                 Topic
@@ -54,7 +54,7 @@ const Section1 = () => {
               className="bg-white rounded-[5px] p-1 h-9 w-[100%] border border-zinc-300"
             />
           </div>
-          <div className="w-28 gap-2 flex flex-col">
+          <div className="w-[23%] gap-2 flex flex-col">
             <div className="flex flex-row justify-between ">
               <span className="text-zinc-600 text-[13px] font-semibold">
                 Valid For
@@ -67,7 +67,7 @@ const Section1 = () => {
           </div>
         </div>
         <div className="flex flex-row gap-3 w-[100%]">
-          <div className="w-[18.7rem] gap-2 flex flex-col">
+          <div className="w-[60%] gap-2 flex flex-col">
             <div className="flex flex-row justify-between ">
               <span className="text-zinc-600 text-[13px] font-semibold">
                 Training
@@ -87,7 +87,7 @@ const Section1 = () => {
               </div>
             </div>
           </div>
-          <div className="w-52 gap-2 flex flex-col">
+          <div className="w-[40%] gap-2 flex flex-col">
             <div className="flex flex-row justify-between ">
               <span className="text-zinc-600 text-[13px] font-semibold">
                 Assign To
