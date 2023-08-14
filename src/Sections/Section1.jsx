@@ -1,5 +1,4 @@
 import React from "react";
-import { IoMdCloudUpload } from "react-icons/io";
 import CustomSelect from "../Components/CustomSelect";
 
 const Section1 = () => {
@@ -64,7 +63,7 @@ const Section1 = () => {
 
             <input
               placeholder="Working at height"
-              className="bg-white rounded-[5px] p-1 h-9 w-[100%] border border-zinc-300"
+              className="bg-white rounded-[5px] p-3 h-9 w-[100%] border border-zinc-300"
             />
           </div>
           <div className="w-52 gap-2 flex flex-col">
@@ -90,10 +89,7 @@ const Section1 = () => {
                   Optional
                 </span>
               </div>
-              <select
-                className="bg-white  rounded-[5px] p-2 h-10 w-[100%] border border-zinc-300"
-                placeholder="Select departments"
-              >
+              <select className="bg-white text-gray-400 rounded-[5px] p-2 h-10 w-[100%] border border-zinc-300">
                 <option className="text-zinc-300  text-xs font-normal">
                   Select departments
                 </option>
@@ -108,10 +104,7 @@ const Section1 = () => {
                   Optional
                 </span>
               </div>
-              <select
-                className="bg-white rounded-[5px] p-2 h-10 w-[100%] border border-zinc-300"
-                placeholder="Select functions"
-              >
+              <select className="bg-white rounded-[5px] text-gray-400 p-2 h-10 w-[100%] border border-zinc-300">
                 <option className="text-zinc-300  text-xs font-normal">
                   Select functions
                 </option>
@@ -199,7 +192,9 @@ const Section1 = () => {
                 </div>
                 <div className="w-[22px] h-[22px] relative flex-col justify-start items-start flex cursor-pointer">
                   <div className="w-[22px] h-[22px] items-center bg-white rounded-full">
-                    <span className="text-gray-400 relative bottom-[4px]">x</span>
+                    <span className="text-gray-400 relative bottom-[4px]">
+                      x
+                    </span>
                   </div>
                 </div>
               </div>
