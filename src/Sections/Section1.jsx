@@ -24,7 +24,7 @@ const Section1 = () => {
 
             <CustomSelect
               options={selectOptions}
-              icon={<img src="vest.png" className="w-9 h-9" alt=""/>}
+              icon={<img src="vest.png" className="w-9 h-9" alt="" />}
               className="bg-white rounded-[5px] p-1 h-9 w-[100%] border border-zinc-300"
             />
           </div>
@@ -137,10 +137,10 @@ const Section1 = () => {
         <div className="flex items-center justify-center w-full">
           <label className="flex flex-col rounded-lg border-4 border-dashed w-full h-60 p-10 group text-center cursor-pointer">
             <div className=" text-center flex flex-col items-center justify-center ">
-              <IoMdCloudUpload
-                className="has-mask object-center "
-                color="#c8c8c8"
-                size={50}
+              <img
+                src="Vector.png"
+                alt=""
+                className="has-mask object-center mt-6 "
               />
               <p className="text-center">
                 <span className="text-zinc-400 text-xs font-normal leading-[17px]">
@@ -168,10 +168,10 @@ const Section1 = () => {
         <div className="w-full flex flex-col gap-2 items-center justify-center">
           <label className="w-full flex flex-col rounded-lg border-4 border-dashed group text-center cursor-pointer p-2 ">
             <div className=" text-center flex flex-col items-center justify-center ">
-              <IoMdCloudUpload
-                className="has-mask object-center "
-                color="#c8c8c8"
-                size={50}
+              <img
+                src="Vector.png"
+                alt=""
+                className="has-mask object-center mt-2 "
               />
               <p className="text-center">
                 <span className="text-zinc-400 text-xs font-normal leading-[17px]">
@@ -199,7 +199,7 @@ const Section1 = () => {
                 </div>
                 <div className="w-[22px] h-[22px] relative flex-col justify-start items-start flex cursor-pointer">
                   <div className="w-[22px] h-[22px] items-center bg-white rounded-full">
-                    <span className="text-gray-400"> x</span>
+                    <span className="text-gray-400 relative bottom-[4px]">x</span>
                   </div>
                 </div>
               </div>
