@@ -9,18 +9,23 @@ const DropDown = ({ options }) => {
       aria-labelledby="menu-button"
       tabindex="-1"
     >
-      <div className="py-1" role="none">
+      <div className="py-1 " role="none">
         {options.map((option, i) => (
           <>
             <a
               href="#"
-              className="text-gray-700 px-4 py-2 text-sm flex justify-normal"
+              className={`text-[#ADADAD] px-4 py-2 text-sm flex justify-normal hover:bg-gray-200 ${
+                i === 0 ? "text-black" : ""
+              }`}
               role="menuitem"
               tabindex="-1"
               id="menu-item-0"
               key={i}
             >
-              <img className="w-6 h-6 rounded-full mr-2 justify-center" src={option.img} />
+              <img
+                className="w-6 h-6 rounded-full mr-2 justify-center"
+                src={option.img}
+              />
               <span>{option.label}</span>
             </a>
           </>

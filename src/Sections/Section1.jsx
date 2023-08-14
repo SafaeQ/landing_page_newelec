@@ -24,6 +24,7 @@ const Section1 = () => {
 
             <CustomSelect
               options={selectOptions}
+              icon={<img src="vest.png" className="w-9 h-9" alt=""/>}
               className="bg-white rounded-[5px] p-1 h-9 w-[100%] border border-zinc-300"
             />
           </div>
