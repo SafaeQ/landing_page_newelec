@@ -20,9 +20,9 @@ const CustomCardSec = () => {
       </div>
       <div>
         <div className="h-[30px] relative flex-row justify-start items-start inline-flex gap-2">
-          <label class="relative inline-flex items-center cursor-pointer">
-            <input type="checkbox" class="sr-only peer" />
-            <div class="w-11 h-6 bg-[#47CA5B] rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-0.5 after:left-[2px] after:bg-[#47CA5B] after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-[#D9FFDF]"></div>
+          <label className="relative inline-flex items-center cursor-pointer">
+            <input type="checkbox" className="sr-only peer" />
+            <div className="w-11 h-6 bg-[#47CA5B] rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-0.5 after:left-[2px] after:bg-[#47CA5B] after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-[#D9FFDF]"></div>
           </label>
         </div>
       </div>
