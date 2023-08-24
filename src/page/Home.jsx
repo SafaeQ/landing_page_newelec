@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import NavBar from "../Sections/NavBar";
-import Section2 from "../Sections/Section2";
+import NavBar from "../Layouts/NavBar";
+import Section2 from "../Layouts/Section2";
 import AliceCarousel from "react-alice-carousel";
 import "react-alice-carousel/lib/alice-carousel.css";
 import { AiFillCheckCircle } from "react-icons/ai";
@@ -8,10 +8,10 @@ import { IoDiceOutline, IoReloadCircleSharp } from "react-icons/io5";
 import { MdOutlineTimer } from "react-icons/md";
 import { RiTimeLine } from "react-icons/ri";
 import "../style.css";
-import Section1 from "../Sections/Section1";
+import Section1 from "../Layouts/Section1";
 import CustomCard from "../Components/CustomCard";
 import CustomCardSec from "../Components/CustomCardSec";
-import QuestionForm from "../Sections/QuestionForm";
+import QuestionForm from "../Layouts/QuestionForm";
 
 const Home = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
