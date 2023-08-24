@@ -2,20 +2,36 @@ import React, { useState } from "react";
 import CustomSelect from "../Components/CustomSelect";
 import PopupConfirme from "../Components/PopupConfirme";
 
+const acceptedImageTypes = ["image/jpg", "image/png"];
+const allowedFormats = [
+  "video/*",
+  "application/pdf",
+  "application/vnd.ms-powerpoint",
+  "application/vnd.openxmlformats-officedocument.presentationml.presentation",
+];
+
 const Section1 = () => {
   const [uploadedFile, setUploadedFile] = useState(null);
   const [uploadedImage, setUploadedImage] = useState(null);
+  const [isImageValid, setIsImageValid] = useState(true);
+  const [isFileValid, setIsFileValid] = useState(true);
 
   const handleFileChange = (event) => {
     const file = event.target.files[0];
-    if (file) {
+    if (file && allowedFormats.includes(file.type)) {
       setUploadedFile(file);
+      setIsFileValid(true);
+    } else {
+      setIsFileValid(false);
     }
   };
   const handleImageChange = (event) => {
     const file = event.target.files[0];
-    if (file) {
+    if (file && acceptedImageTypes.includes(file.type)) {
       setUploadedImage(file);
+      setIsImageValid(true);
+    } else {
+      setIsImageValid(false);
     }
   };
 
@@ -222,8 +238,14 @@ const Section1 = () => {
             handleDelete={handleDeleteImage}
           />
         )}
-        <p className="text-zinc-400 text-[10px] font-semibold">
-          *Only JPG, PNG files are allowed. Image must be less than 2 MB
+        <p
+          className={`text-${
+            isImageValid ? "zinc-400" : "red-500"
+          } text-[10px] font-semibold`}
+        >
+          {isImageValid
+            ? "*Only JPG and PNG files are allowed. Image must be less than 2 MB"
+            : "Invalid file format. Only JPG and PNG files are allowed."}
         </p>
       </div>
 
@@ -269,11 +291,16 @@ const Section1 = () => {
               handleDelete={handleDeleteFile}
             />
           )}
-          <span className="text-zinc-400 text-[9px] font-semibold flex items-start justify-start">
+          <span
+            className={`text-${
+              isFileValid ? "zinc-400" : "red-500"
+            }  text-[9px] font-semibold flex items-start justify-start`}
+          >
             *Only Video, PDF and SlideShow
             <br />
-            files are allowed.
+            {isFileValid ? " files are allowed." : "Invalid file format."}
           </span>
+
           <div className="w-full h-[13px] justify-center items-center gap-[5px] inline-flex">
             <div className="w-full h-[0px] border border-gray-200"></div>
             <div className="text-neutral-400 text-[11px] font-bold">OR</div>
