@@ -4,6 +4,7 @@ import { IoMdCloudUpload } from "react-icons/io";
 
 const Section2 = ({ question, id, index, onDeleteQuestion }) => {
   const [uploadedFile, setUploadedFile] = useState(null);
+  const [selectedAnswer, setSelectedAnswer] = useState(null);
 
   const handleFileChange = (event) => {
     const file = event.target.files[0];
@@ -49,7 +50,11 @@ const Section2 = ({ question, id, index, onDeleteQuestion }) => {
         <div className="flex p-4 bg-white rounded-[5px] border border-gray-200 items-start justify-between">
           <span className="text-zinc-600 text-xs font-semibold">True</span>
           <div className="flex flex-row gap-2">
-            <AiFillCheckSquare color="#B5F6BF" size={20} />
+            <AiFillCheckSquare
+              color={selectedAnswer === "True" ? "#48CA5C" : "#E7E7E7"}
+              size={20}
+              onClick={() => setSelectedAnswer("True")}
+            />
             <label className="flex flex-col text-center cursor-pointer  ">
               <IoMdCloudUpload size={20} color="#E7E7E7" />
               <input type="file" className="hidden" />
@@ -59,7 +64,11 @@ const Section2 = ({ question, id, index, onDeleteQuestion }) => {
         <div className="flex p-4 bg-white rounded-[5px] border border-gray-200 items-start justify-between">
           <span className="text-zinc-600 text-xs font-semibold">False</span>
           <div className="flex flex-row gap-2">
-            <AiFillCheckSquare color="#48CA5C" size={20} />
+            <AiFillCheckSquare
+              color={selectedAnswer === "False" ? "#48CA5C" : "#E7E7E7"}
+              onClick={() => setSelectedAnswer("False")}
+              size={20}
+            />
             <label className="flex flex-col text-center cursor-pointer  ">
               <IoMdCloudUpload size={20} color="#E7E7E7" />
               <input type="file" className="hidden" />
