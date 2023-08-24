@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import NavBar from "../Sections/NavBar";
 import Section2 from "../Sections/Section2";
 import AliceCarousel from "react-alice-carousel";
@@ -11,8 +11,33 @@ import "../style.css";
 import Section1 from "../Sections/Section1";
 import CustomCard from "../Components/CustomCard";
 import CustomCardSec from "../Components/CustomCardSec";
+import QuestionForm from "../Sections/QuestionForm";
 
 const Home = () => {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [questions, setQuestions] = useState([]);
+
+  const openModal = () => {
+    setIsModalOpen(true);
+  };
+
+  const closeModal = () => {
+    setIsModalOpen(false);
+  };
+
+  const handleAddQuestion = (newQuestion) => {
+    const newId =
+      questions.length > 0 ? questions[questions.length - 1].id + 1 : 1;
+    const newQuestionWithId = { id: newId, text: newQuestion };
+    setQuestions([...questions, newQuestionWithId]);
+  };
+
+  // remove question
+  const handleDeleteQuestion = (id) => {
+    const updatedQuestions = questions.filter((question) => question.id !== id);
+    setQuestions(updatedQuestions);
+  };
+
   const items = [
     <CustomCard
       icon={<IoDiceOutline color="#2A5F9E" size={40} />}
@@ -81,10 +106,20 @@ const Home = () => {
               </p>
             </div>
             <div className="w-full h-[0px] border border-gray-200 mb-2"></div>
-
-            <Section2 />
-            <Section2 />
-            <button className="w-full btn h-10 bg-sky-100 rounded-[5px] p-1">
+            {/* questions component */}
+            {questions?.map((question, index) => (
+              <Section2
+                key={question.id}
+                question={question.text}
+                index={index}
+                id={question.id}
+                onDeleteQuestion={handleDeleteQuestion}
+              />
+            ))}
+            <button
+              className="w-full btn h-10 bg-sky-100 rounded-[5px] p-1"
+              onClick={openModal}
+            >
               <span className="text-blue-500 text-sm font-bold leading-[17px]">
                 Add Question{" "}
               </span>
@@ -92,6 +127,12 @@ const Home = () => {
                 +
               </span>
             </button>
+            {/* form modal */}
+            <QuestionForm
+              isOpen={isModalOpen}
+              onClose={closeModal}
+              onAddQuestion={handleAddQuestion}
+            />
           </div>
           <div className=" carousel-container w-full h-full rounded-[5px] p-4 flex flex-row gap-4 mt-2">
             <AliceCarousel
