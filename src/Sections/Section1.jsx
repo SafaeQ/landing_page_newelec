@@ -1,7 +1,26 @@
-import React from "react";
+import React, { useState } from "react";
 import CustomSelect from "../Components/CustomSelect";
 
 const Section1 = () => {
+  const [uploadedFile, setUploadedFile] = useState(null);
+
+  const handleFileChange = (event) => {
+    const file = event.target.files[0];
+    if (file) {
+      setUploadedFile(file);
+    }
+  };
+
+  // delete the uploaded file
+  const handleDeleteFile = () => {
+    setUploadedFile(null);
+    // reset properly when the file is deleted
+    const fileInput = document.getElementById("fileInput");
+    if (fileInput) {
+      fileInput.value = "";
+    }
+  };
+
   const selectOptions = [{ icon: "", label: "Safty" }];
   const selectOptions2 = [{ value: "option1", label: "VCA" }];
   const selectOptions3 = [{ label: "1 year" }];
@@ -82,8 +101,8 @@ const Section1 = () => {
                 Working at height
               </div>
               <div className="flex flex-row items-center">
-                <img className="w-[20px] h-[20px]" src="jump.png" alt=""/>
-                <img className="w-[16px] h-[16px]" src="Vect.png" alt=""/>
+                <img className="w-[20px] h-[20px]" src="jump.png" alt="" />
+                <img className="w-[16px] h-[16px]" src="Vect.png" alt="" />
               </div>
             </div>
           </div>
@@ -198,28 +217,38 @@ const Section1 = () => {
                 </span>
               </p>
             </div>
-            <input type="file" className="hidden" />
+            <input
+              type="file"
+              id="fileInput"
+              className="hidden"
+              onChange={handleFileChange}
+            />
           </label>
           <div className="w-full relative flex items-center justify-center">
-            <div className="w-full p-2 bg-green-500 rounded-[5px]">
-              <div className="w-full h-6 justify-between items-center gap-[34px] flex p-1">
-                <div className="w-[104px] self-stretch flex-col justify-center items-start inline-flex">
-                  <span className="text-white text-[10px] font-semibold">
-                    Completed
-                  </span>
-                  <span className="text-white text-[11px] font-bold">
-                    workingAtHeight.pdf
-                  </span>
-                </div>
-                <div className="w-[22px] h-[22px] relative flex-col justify-start items-start flex cursor-pointer">
-                  <div className="w-[22px] h-[22px] items-center bg-white rounded-full">
-                    <span className="text-gray-400 relative bottom-[4px]">
-                      x
+            {uploadedFile && (
+              <div className="w-full p-2 bg-green-500 rounded-[5px]">
+                <div className="w-full h-auto justify-between items-center gap-[34px] flex ">
+                  <div className="w-[104px] self-stretch flex-col justify-center items-start inline-flex">
+                    <span className="text-white text-[10px] font-semibold">
+                      Completed
                     </span>
+                    <span className="text-white text-[11px] font-bold">
+                      {uploadedFile.name}
+                    </span>
+                  </div>
+                  <div className="w-[22px] h-[22px] relative flex-col justify-start items-start flex cursor-pointer">
+                    <div className="w-[22px] h-[22px] items-center bg-white rounded-full">
+                      <button
+                        className="text-gray-400 relative bottom-[4px]"
+                        onClick={handleDeleteFile}
+                      >
+                        x
+                      </button>
+                    </div>
                   </div>
                 </div>
               </div>
-            </div>
+            )}
           </div>
           <span className="text-zinc-400 text-[9px] font-semibold flex items-start justify-start">
             *Only Video, PDF and SlideShow
