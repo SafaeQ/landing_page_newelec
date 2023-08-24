@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { AiFillCheckSquare } from "react-icons/ai";
 import { IoMdCloudUpload } from "react-icons/io";
+import PopupConfirme from "../Components/PopupConfirme";
 
 const Section2 = ({ question, id, index, onDeleteQuestion }) => {
   const [uploadedFile, setUploadedFile] = useState(null);
@@ -114,32 +115,12 @@ const Section2 = ({ question, id, index, onDeleteQuestion }) => {
             onChange={handleFileChange}
           />
         </label>
-        <div className="w-full relative flex items-center justify-center">
-          {uploadedFile && (
-            <div className="w-full p-2 bg-green-500 rounded-[5px]">
-              <div className="w-full h-auto justify-between items-center gap-[34px] flex ">
-                <div className="w-[104px] self-stretch flex-col justify-center items-start inline-flex">
-                  <span className="text-white text-[10px] font-semibold">
-                    Completed
-                  </span>
-                  <span className="text-white text-[11px] font-bold">
-                    {uploadedFile.name}
-                  </span>
-                </div>
-                <div className="w-[22px] h-[22px] relative flex-col justify-start items-start flex cursor-pointer">
-                  <div className="w-[22px] h-[22px] items-center bg-white rounded-full">
-                    <button
-                      className="text-gray-400 relative bottom-[4px]"
-                      onClick={handleDeleteFile}
-                    >
-                      x
-                    </button>
-                  </div>
-                </div>
-              </div>
-            </div>
-          )}
-        </div>
+        {uploadedFile && (
+          <PopupConfirme
+            uploaded={uploadedFile}
+            handleDelete={handleDeleteFile}
+          />
+        )}
       </div>
     </div>
   );

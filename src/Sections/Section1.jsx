@@ -1,13 +1,21 @@
 import React, { useState } from "react";
 import CustomSelect from "../Components/CustomSelect";
+import PopupConfirme from "../Components/PopupConfirme";
 
 const Section1 = () => {
   const [uploadedFile, setUploadedFile] = useState(null);
+  const [uploadedImage, setUploadedImage] = useState(null);
 
   const handleFileChange = (event) => {
     const file = event.target.files[0];
     if (file) {
       setUploadedFile(file);
+    }
+  };
+  const handleImageChange = (event) => {
+    const file = event.target.files[0];
+    if (file) {
+      setUploadedImage(file);
     }
   };
 
@@ -18,6 +26,16 @@ const Section1 = () => {
     const fileInput = document.getElementById("fileInput");
     if (fileInput) {
       fileInput.value = "";
+    }
+  };
+
+  // delete the uploaded image
+  const handleDeleteImage = () => {
+    setUploadedImage(null);
+    // reset properly when the file is deleted
+    const imageInput = document.getElementById("imageInput");
+    if (imageInput) {
+      imageInput.value = "";
     }
   };
 
@@ -168,7 +186,11 @@ const Section1 = () => {
       <div className="bg-white w-full rounded-[5px] shadow p-4 flex flex-col items-start justify-start gap-5">
         <span className="text-zinc-600 text-[13px] font-semibold ">Image</span>
         <div className="flex items-center justify-center w-full">
-          <label className="flex flex-col rounded-lg border-4 border-dashed w-full h-60 p-10 group text-center cursor-pointer">
+          <label
+            className={`flex flex-col rounded-lg border-4 border-dashed group w-full  text-center cursor-pointer ${
+              uploadedImage ? "h-44 p-6" : "h-60 p-10"
+            } `}
+          >
             <div className=" text-center flex flex-col items-center justify-center ">
               <img
                 src="Vector.png"
@@ -186,9 +208,20 @@ const Section1 = () => {
                 </span>
               </p>
             </div>
-            <input type="file" className="hidden" />
+            <input
+              type="file"
+              className="hidden"
+              id="imageInput"
+              onChange={handleImageChange}
+            />
           </label>
         </div>
+        {uploadedImage && (
+          <PopupConfirme
+            uploaded={uploadedImage}
+            handleDelete={handleDeleteImage}
+          />
+        )}
         <p className="text-zinc-400 text-[10px] font-semibold">
           *Only JPG, PNG files are allowed. Image must be less than 2 MB
         </p>
@@ -199,7 +232,12 @@ const Section1 = () => {
           Training file
         </span>
         <div className="w-full flex flex-col gap-2 items-center justify-center">
-          <label className="w-full flex flex-col rounded-lg border-4 border-dashed group text-center cursor-pointer p-2 ">
+          {/* <label className="w-full flex flex-col rounded-lg border-4 border-dashed group text-center cursor-pointer p-2 "> */}
+          <label
+            className={`flex flex-col rounded-lg border-4 border-dashed group w-full  text-center cursor-pointer ${
+              uploadedFile ? "p-2" : "h-44 p-6"
+            } `}
+          >
             <div className=" text-center flex flex-col items-center justify-center ">
               <img
                 src="Vector.png"
@@ -224,32 +262,13 @@ const Section1 = () => {
               onChange={handleFileChange}
             />
           </label>
-          <div className="w-full relative flex items-center justify-center">
-            {uploadedFile && (
-              <div className="w-full p-2 bg-green-500 rounded-[5px]">
-                <div className="w-full h-auto justify-between items-center gap-[34px] flex ">
-                  <div className="w-[104px] self-stretch flex-col justify-center items-start inline-flex">
-                    <span className="text-white text-[10px] font-semibold">
-                      Completed
-                    </span>
-                    <span className="text-white text-[11px] font-bold">
-                      {uploadedFile.name}
-                    </span>
-                  </div>
-                  <div className="w-[22px] h-[22px] relative flex-col justify-start items-start flex cursor-pointer">
-                    <div className="w-[22px] h-[22px] items-center bg-white rounded-full">
-                      <button
-                        className="text-gray-400 relative bottom-[4px]"
-                        onClick={handleDeleteFile}
-                      >
-                        x
-                      </button>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            )}
-          </div>
+
+          {uploadedFile && (
+            <PopupConfirme
+              uploaded={uploadedFile}
+              handleDelete={handleDeleteFile}
+            />
+          )}
           <span className="text-zinc-400 text-[9px] font-semibold flex items-start justify-start">
             *Only Video, PDF and SlideShow
             <br />
